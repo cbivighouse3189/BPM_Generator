@@ -10,32 +10,38 @@
 import java.awt.*;
 
 public class BPM_Generator_Metronome_beep {
-	
-	/**
-	 * 
-	 */
+
 	private final long serialVersionUID = 1L;
 
 	double beatsPerMinute;
 	int measure, counter;
 	
 	//Setter/Mutator for Metronome
+   /*
+   * Assigns this.beatsPerMinute to variable beatsPerMinute
+   */
 	public void setBPM(double beatsPerMinute) {
 		this.beatsPerMinute = beatsPerMinute;
 	}
 	
 	//Getter/Accessor for Metronome
+   /*
+   * @return beatsPerMinute
+   */
 	public double getBPM() {
 		 return beatsPerMinute;
 	}
-
-	//Metronome Constructor
+/*
+   * Metronome Constructor
+   */
 	public BPM_Generator_Metronome_beep (double beatsPerMinute, int measure){
 		this.beatsPerMinute = beatsPerMinute;
 		this.measure = measure;	
 	}
 	
-	//Start method to begin metronome sound production
+	/*
+   * Start method to begin metronome sound production
+   */
 	public void start(){
 		//To set amount of metronome quarter notes during runtime, adjust "i< # of beats"
 		//**This for loop was originally a while loop set to (true); exercise caution as this created an infinite loop!!**
